@@ -57,7 +57,6 @@ public class PostHolder extends BaseHolder implements Serializable {
 	@Override
 	public Long getCacheKey() {
 		return this.getId();
-	}
 
 	@Override
 	public String getCacheName() {

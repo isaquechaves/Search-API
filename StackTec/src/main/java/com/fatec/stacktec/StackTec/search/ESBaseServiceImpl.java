@@ -40,12 +40,16 @@ public abstract class ESBaseServiceImpl<REPOSITORY extends ElasticsearchReposito
 	}
 	
 	
-	public Page<HOLDER> serach(SearchQuery query){
+	public Page<HOLDER> search(SearchQuery query){
 		return repository.search(query);
 	}
 	
 	public List<HOLDER> findAll() {
 		return ((AggregatedPageImpl) this.repository.findAll()).getContent();
+	}
+	
+	public Iterable<HOLDER> saveAll(Iterable<HOLDER> holder) {
+		return repository.saveAll(holder);
 	}
 	
 	public HOLDER save(HOLDER holder) {
