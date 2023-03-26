@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fatec.stacktec</groupId>
-	<artifactId>StackTec</artifactId>
+	<artifactId>search-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>StackTec</name>
+	<name>search-api</name>
 	<description>Completeltion project of the Systems Development Analysis course.</description>
 	<properties>
 		<java.version>11</java.version>
@@ -61,7 +61,33 @@
 			<version>2.9.2</version>				
 		</dependency>
 	</dependencies>
-
+	
+	<repositories>
+		<repository>
+			<id>maven-group</id>
+			<url>https://repo.NAOTEMAINDAFUDEU.com.br/repository/maven-group/</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>stacktec-nexus-snapshots</id>
+			<url>https://repo.NAOTEMAINDAFUDEU.com.br/repository/maven-snapshots/</url>			
+		</snapshotRepository>
+		<repository>
+			<id>stacktec-nexus-releases</id>
+			<url>https://repo.NAOTEMAINDAFUDEU.com.br/repository/maven-snapshots/</url>
+		</repository>
+	</distributionManagement>	
+	
 	<build>
 		<plugins>
 			<plugin>
