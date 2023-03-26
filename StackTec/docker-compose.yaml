@@ -5,9 +5,11 @@ services:
       ports:
           - 8080:8080
       environment:
-          LASTICSEARCH_CLUSTER_NAME: elastic
+          ELASTICSEARCH_CLUSTER_NAME: elastic
           ELASTICSEARCH_CLUSTER_NODES: elastic:9300
-          ELASTICSEARCH_CLUSTER_URL: localhost
+          ELASTICSEARCH_CLUSTER_URL: 172.18.0.2
+          ELASTICSEARCH_USER: elastic
+          ELASTICSEARCH_PASSWORD: elastic
       depends_on:
           - elastic
 

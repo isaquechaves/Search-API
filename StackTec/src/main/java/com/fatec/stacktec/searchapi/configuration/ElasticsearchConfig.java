@@ -22,8 +22,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.java.Log;
 
-
-
 @Log
 @Getter
 @Setter
@@ -75,6 +73,7 @@ public class ElasticsearchConfig {
 			
 			if(!elasticsearchTemplate().indexExists(doc.indexName())) {
 				//log.info("Index - {} does not exists. Creating index now!! " + doc.indexName());
+				elasticsearchTemplate().createIndex(clazz);
 			}
 			elasticsearchTemplate().refresh(doc.indexName());
 			elasticsearchTemplate().putMapping(clazz);		

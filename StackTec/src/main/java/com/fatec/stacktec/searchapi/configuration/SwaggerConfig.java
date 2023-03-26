@@ -17,7 +17,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api10() {
 		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("stacktec-api-1.0")
+				.groupName("stacktec-searchapi-1.0")
 				.select()
 					.apis(RequestHandlerSelectors.basePackage("com.fatec.stacktec.searchapi.controller"))
 					.paths(PathSelectors.any())
