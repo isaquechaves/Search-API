@@ -64,8 +64,8 @@
 	
 	<repositories>
 		<repository>
-			<id>maven-group</id>
-			<url>https://repo.NAOTEMAINDAFUDEU.com.br/repository/maven-group/</url>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/isaqueChaves/maven-repository</url>
 			<releases>
 				<enabled>true</enabled>
 				<updatePolicy>always</updatePolicy>
@@ -77,16 +77,14 @@
 		</repository>
 	</repositories>
 	
+	
 	<distributionManagement>
-		<snapshotRepository>
-			<id>stacktec-nexus-snapshots</id>
-			<url>https://repo.NAOTEMAINDAFUDEU.com.br/repository/maven-snapshots/</url>			
-		</snapshotRepository>
-		<repository>
-			<id>stacktec-nexus-releases</id>
-			<url>https://repo.NAOTEMAINDAFUDEU.com.br/repository/maven-snapshots/</url>
-		</repository>
-	</distributionManagement>	
+   		<repository>
+     		<id>github</id>
+     		<name>GitHub OWNER Apache Maven Packages</name>
+     		<url>https://maven.pkg.github.com/isaqueChaves/maven-repository</url>
+   		</repository>
+	</distributionManagement>
 	
 	<build>
 		<plugins>

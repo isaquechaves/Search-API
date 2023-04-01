@@ -1,6 +1,7 @@
 package com.fatec.stacktec.searchapi.holder;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -8,6 +9,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fatec.stacktec.searchapi.helper.ComentarioObject;
 import com.fatec.stacktec.searchapi.helper.DisciplinaObject;
 import com.fatec.stacktec.searchapi.helper.OptionObject;
@@ -54,6 +56,12 @@ public class PostHolder extends BaseHolder implements Serializable {
 	
 	@Field(type = FieldType.Nested)
 	private List<ImgData> imagens; 
+	
+	@Field(type = FieldType.Date)
+	private Date criadoEm;
+
+	@Field(type = FieldType.Date)
+	private Date atualizadoEm;
 	
 	@Override
 	public Long getCacheKey() {

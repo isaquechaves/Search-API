@@ -11,6 +11,7 @@ import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fatec.stacktec.searchapi.helper.SearchResult;
 import com.fatec.stacktec.searchapi.holder.PostHolder;
 import com.fatec.stacktec.searchapi.repository.PostSearchRepository;
 import com.fatec.stacktec.searchapi.search.ESBaseServiceImpl;
@@ -40,6 +41,11 @@ public class PostSearchService extends ESBaseServiceImpl<PostSearchRepository, P
 		List<PostHolder> postList = elasticsearchOperations.queryForList(searchQuery, PostHolder.class);
 		
 		return postList;
+	}
+
+	public SearchResult search(Integer page, Integer size) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

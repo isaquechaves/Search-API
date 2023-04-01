@@ -1,5 +1,6 @@
 package com.fatec.stacktec.searchapi.dto;
 
+import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -42,6 +43,11 @@ public class PostDto {
 	
 	@JsonProperty
 	private List<ImgData> images;
-		
+	
+	@JsonProperty
+	private Date criadoEm;
+
+	@JsonProperty
+	private Date atualizadoEm;
 	
 }
