@@ -16,16 +16,18 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(indexName = "usuario-index", type = "usuario-type", createIndex = false)
-public class UsuarioHolder extends BaseHolder implements Serializable{
+@Document(indexName = "userinternal-index", type = "usuario-type", shards = 1, createIndex = false)
+public class UserInternalHolder extends BaseHolder implements Serializable{
 	
-	public static final String CACHE_NAME = "usuario-long-cache";
+	public static final String CACHE_NAME = "userinternal-longtime-cache";
 	
 	@Id
 	private Long id;
 	
-	@Field(type = FieldType.Text)
-	private String nome;
+	@Field(type = FieldType.Text, fielddata = true)
+	private String name;
+	
+	private String keycloakId;
 	
 	@Field(type = FieldType.Text)
 	private String email;
