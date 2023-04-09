@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(indexName = "permission-index", type = "permission-type", shards = 1, createIndex = false)
-public class PermissionHolder extends BaseHolder implements Serializable{
+public class RoleHolder extends BaseHolder implements Serializable{
 	
 	public static final String CACHE_NAME = "permission-longtime-cache";
 	
@@ -24,9 +24,7 @@ public class PermissionHolder extends BaseHolder implements Serializable{
 	
 	@Field(type = FieldType.Text, fielddata = true)
 	private String name;
-	
-	private String keycloakId;
-	
+		
 	@Override
 	public Object getCacheKey() { 
 		return this.getId();

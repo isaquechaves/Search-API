@@ -10,11 +10,12 @@
 	</parent>
 	<groupId>com.fatec.stacktec</groupId>
 	<artifactId>search-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>search-api</name>
 	<description>Completeltion project of the Systems Development Analysis course.</description>
 	<properties>
 		<java.version>11</java.version>
+	  	<github.global.server>github</github.global.server>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -77,11 +78,10 @@
 		</repository>
 	</repositories>
 	
-	
 	<distributionManagement>
    		<repository>
      		<id>github</id>
-     		<name>GitHub OWNER Apache Maven Packages</name>
+     		<name>GitHub isaqueChaves Apache Maven Packages</name>
      		<url>https://maven.pkg.github.com/isaqueChaves/maven-repository</url>
    		</repository>
 	</distributionManagement>
@@ -92,12 +92,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
+					<forceJavacCompilerUse>true</forceJavacCompilerUse>
 				</configuration>
 			</plugin>
 		</plugins>

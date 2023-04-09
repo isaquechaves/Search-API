@@ -26,9 +26,7 @@ public class UserInternalHolder extends BaseHolder implements Serializable{
 	
 	@Field(type = FieldType.Text, fielddata = true)
 	private String name;
-	
-	private String keycloakId;
-	
+		
 	@Field(type = FieldType.Text)
 	private String email;
 	
