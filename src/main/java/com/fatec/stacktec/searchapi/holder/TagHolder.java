@@ -22,6 +22,9 @@ public class TagHolder extends BaseHolder implements Serializable{
 	@Id
 	private Long id;
 	
+	@Field(type = FieldType.Text)
+	private String nome;
+	
 	@Field(type = FieldType.Integer)
 	private Integer qtdePosts;
 	
